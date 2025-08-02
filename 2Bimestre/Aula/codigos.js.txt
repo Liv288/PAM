@@ -1,0 +1,49 @@
+import {Text, View,StyleSheet } from 'react-native';
+
+export default function Header() {
+    return (
+    <View style={stylesHeader.cabecalho}>
+        <Text> Cabeçalho </Text>                
+        <Text> Menu </Text>
+        <Text> Menu </Text>
+        <Text> Menu </Text>
+      </View>
+    );
+  }
+
+  const stylesHeader = StyleSheet.create({
+    cabecalho: {      
+      backgroundColor: '#f00',
+      width: '100%',      
+    },
+  });
+
+---------------------------------
+
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, View } from 'react-native';
+
+{/* importação do componente */}
+import Header from './components/Header';
+
+export default function App() {
+
+  return (
+    <View style={styles.container}>
+
+      {/*'utilização do componente*/}
+      <Header />     
+
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
